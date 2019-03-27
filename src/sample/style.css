@@ -32,8 +32,18 @@
     -fx-font-size: 16;
 }
 
+.pie_chart_left_side {
+    -fx-padding: 0 0 0 20;
+}
 
+.pie_chart_right_side {
+    -fx-padding: 0 0 0 -20;
+}
 
+.hyperlink {
+    -fx-underline: false;
+    -fx-text-inner-color: black;
+}
 
 .button {
     -fx-background-color: #dfdfdf;

@@ -13,7 +13,9 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="/sample/style.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+<?import javafx.scene.control.Hyperlink?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" stylesheets="/sample/style.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
    <top>
        <HBox prefHeight="50.0" prefWidth="200.0" spacing="20" styleClass="top_menu">
            <Button mnemonicParsing="false" text="Add" />
@@ -27,10 +29,10 @@
        <VBox prefHeight="200.0" prefWidth="120.0" styleClass="left_menu" BorderPane.alignment="CENTER">
            <Label fx:id="data" text="Data" />
            <VBox styleClass="left_sub_menu_label_group">
-               <Label text="Cost" />
-               <Label text="Goods" />
-               <Label text="Employees" />
-               <Label text="Departments" />
+               <Hyperlink text="Cost" />
+               <Hyperlink text="Goods" />
+               <Hyperlink text="Employees" />
+               <Hyperlink text="Departments" />
            </VBox>
 
        </VBox>
@@ -38,10 +40,10 @@
    <center>
        <GridPane styleClass="central_grid" BorderPane.alignment="CENTER">
            <HBox prefHeight="50.0" prefWidth="200.0">
-               <ImageView fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <ImageView fitWidth="30.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
                    <Image url="https://cdn1.iconfinder.com/data/icons/business-office-41/64/x-09-512.png" />
                </ImageView>
-               <StackPane maxWidth="Infinity" prefWidth="50.0" HBox.hgrow="ALWAYS">
+               <StackPane alignment="CENTER_RIGHT" maxWidth="Infinity"  HBox.hgrow="ALWAYS">
                    <Label fx:id="employeesLabel" text="Employees" />
                </StackPane>
            </HBox>
@@ -50,7 +52,7 @@
                    <Image url="https://cdn0.iconfinder.com/data/icons/market-and-economics-17/64/66-512.png" />
                </ImageView>
            </StackPane>
-           <Label GridPane.rowIndex="1" GridPane.columnIndex="0" text=">45 years" />
+           <Label styleClass="pie_chart_left_side" GridPane.rowIndex="1" GridPane.columnIndex="0" text=">45 years" />
            <AnchorPane fx:id="pie_chart_right_side"  GridPane.rowIndex="1" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" prefHeight="100.0">
                <Label AnchorPane.topAnchor="0.0" text="28-45 years" />
                <Label AnchorPane.bottomAnchor="0.0" text="28 years" />
